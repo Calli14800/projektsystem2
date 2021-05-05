@@ -1,18 +1,17 @@
 package de.thbrandenburg.collin.webapp.student;
 
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonTypeId;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
 
+import lombok.Getter;
+import lombok.Setter;
 
-@JsonAnyGetter
-@JsonAnySetter
-@EntityScan
+import javax.persistence.Id;
+
+@Getter
+@Setter
 
 
 public class Student {
-    @JsonTypeId
+@Id
     private Long id;
     private String name;
     private Long matrNr;
